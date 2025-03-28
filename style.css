@@ -1,28 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
 body {
-    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.5s ease-in-out;
 }
 
-.pricing-card {
-    width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
+/* Arka plan temaları */
+.clear-bg {
+    background: linear-gradient(to bottom, #87ceeb, #ffffff);
 }
+
+.cloudy-bg {
+    background: linear-gradient(to bottom, #d7d2cc, #304352);
+}
+
+.rainy-bg {
+    background: linear-gradient(to bottom, #314755, #26a0da);
+}
+
+.snowy-bg {
+    background: linear-gradient(to bottom, #e6dada, #274046);
+}
+
+.storm-bg {
+    background: linear-gradient(to bottom, #000000, #434343);
+}
+
+.foggy-bg {
+    background: linear-gradient(to bottom, #757f9a, #d7dde8);
+}
+
+.default-bg {
+    background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+}
+
+
+.weather-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
 
 .card-header {
-    background: #E3E3E3;
     font-size: 20px;
     font-weight: 600;
-    padding: 15px;
-    align-items: center;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
 }
 
-.card-title {
-    font-size: 28px;
-    font-weight: 700;
+#cityInput {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
 }
 
-.card-body ul li {
-    font-size: 14px;
-    color: #555;
-    padding: 5px 0;
+#cityInput::placeholder {
+    color: #ddd;
+}
+
+.btn-primary {
+    background-color: #00c9ff;
+    border: none;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #92fe9d;
+    color: #000;
+}
+
+.weather-icon {
+    font-size: 70px;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+}
+
+.weather-icon:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
