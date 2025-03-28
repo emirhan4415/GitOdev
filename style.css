@@ -7,7 +7,7 @@ body {
     transition: background 0.5s ease-in-out;
 }
 
-/* Arka plan temaları */
+
 .clear-bg {
     background: linear-gradient(to bottom, #87ceeb, #ffffff);
 }
